@@ -1,0 +1,67 @@
+/*Global Settings */
+
+/*Colors*/
+
+:root {
+    --background: #0B0C10;
+    --bttn: #66FCF1;
+    --mainclr: #1F2833;
+    --accent2: #45A29E;
+    --accent3: #1c3334;
+    --text: #C5C6C7;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    display: flex;
+  }
+
+  header {
+    /*background-size: cover;*/
+    background-position: center;
+    display: inline-block;
+    width: 100%;
+    background-color: var(--accent3);
+    min-height: 200px;
+    max-height: 250px;
+  }
+
+  #timer {
+    var timer = 20;
+    var counter-set: ;
+  }
+
+      /*@media screen and (max-width: 840px) {
+    .shrink-wrap {
+        flex-direction: column;
+    }*/
+
+  h1 {
+    font-size: 40px;
+    color: var(--text);
+    align-items:flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    color: var(--text);
+    align-items:flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+    /*@media screen and (max-width: 840px) {
+    .shrink-wrap {
+        flex-direction: column;
+    }*/
