@@ -4,7 +4,7 @@
 
 :root {
     --background: #0B0C10;
-    --bttn: #66FCF1;
+    --btn: #66FCF1;
     --mainclr: #1F2833;
     --accent2: #45A29E;
     --accent3: #1c3334;
@@ -25,7 +25,6 @@
     color: var(--text);
     align-items:flex-end;
     justify-content: flex-end;
-    /*flex-direction: column;*/
     padding: 0 20px 0 20px;
   }
 
@@ -34,20 +33,41 @@
     color: var(--text);
     align-items:flex-end;
     justify-content: flex-end;
-    /*flex-direction: column;*/
     padding: 0 20px 0 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: var(--text);
+    align-items:flex-end;
+    justify-content: flex-end;
+    padding: 0 20px 10px 0;
+    font-weight: bolder;
   }
 
   p {
     color: #C5C6C7;
+    padding: 0 0 10px 0;
   }
 
-  .btn {
+  li a {
+    color: #C5C6C7;
+    padding: 0 0 10px 0;
+    text-decoration: none;
+    font-size: larger;
+  }
+
+  a:visited {
+    color:var(--background);
+  }
+
+  .timer {
     display:flex;
-    padding: 0 20px 0 20px;
+    padding: 30px 40px 30px 40px;
     margin: 0 20px 0 0px;
     font-size: 20px;
     font-weight: bolder;
+    border-radius: 50%;
   }
 
   /*Section flex settings */
@@ -60,10 +80,7 @@
     align-items: center;
     width: 100%;
     padding: 50px 0 50px 0;
-    /*min-height: 200px;
-    max-height: 200px;
-    /*display: grid;
-    /*flex: 1;*/
+
   }
 
   .flexbody {
@@ -75,33 +92,75 @@
   .flexmain {
     display: flex;
     background-color: var(--background);
+    flex: 1;
   }
 
   .flexquiz {
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--mainclr);
-    padding: 20px;
+    padding: 10px;
     margin: 10px 10px 0 10px;
-    width: 75%;
+    flex: 3;
+    display: flex;
+      /*align-content: center;
+    justify-content: center;*/
+  }
+
+  .startbtn {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: var(--btn);
+    align-content: center;
+    justify-content: center;
+  }
+
+  .quizform {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+ 
+  .submitbtn {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+  }
+
+
+  /*Boxes on the left side */
+
+  #flexbgpic {
+    background-image: url("../../assets/images/gradient.png");
+    background-size: cover;
+    display: flex;
+    border: none;
+
   }
 
   .leftasideboxes {
-    width: 25%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
-  .flexaside1 {
-    flex-direction: row;
-    background-color: var(--accent2);
-    padding: 20px;
-    margin: 10px 0 10px 0;
-  }
-
-  .flexaside2 {
+  .flexaside {
     flex-direction: column;
     background-color: var(--accent2);
     padding: 20px;
-    margin: 0 0 10px 0;
-  } 
+    margin: 10px 0 0 0;
+    flex: 1;
+  }
 
   @media screen and (max-width: 840px) {
     .flexheader {
@@ -124,6 +183,7 @@
   width: 100%;
   padding: 20px;
   margin: 10px 0 10px 0;
+}
 
 
 
