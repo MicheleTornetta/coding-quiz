@@ -1,211 +1,230 @@
-
-
 /*Colors*/
 
 :root {
-    --background: #0B0C10;
-    --btn: #66FCF1;
-    --mainclr: #1F2833;
-    --accent2: #45A29E;
-    --accent3: #1c3334;
-    --text: #C5C6C7;
-  }
-
-  /*Global Settings */
-
-  * {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-
-  h1 {
-    font-size: 40px;
-    color: var(--text);
-    align-items:flex-end;
-    justify-content: flex-end;
-    padding: 0 20px 0 20px;
-  }
-
-  h2 {
-    font-size: 20px;
-    color: var(--text);
-    align-items:flex-end;
-    justify-content: flex-end;
-    padding: 0 20px 0 20px;
-  }
-
-  h3 {
-    font-size: 18px;
-    color: var(--text);
-    align-items:flex-end;
-    justify-content: flex-end;
-    padding: 0 20px 10px 0;
-    font-weight: bolder;
-  }
-
-  p {
-    color: #C5C6C7;
-    padding: 0 0 10px 0;
-  }
-
-  li a {
-    color: #C5C6C7;
-    padding: 0 0 10px 0;
-    text-decoration: none;
-    font-size: larger;
-  }
-
-  a:visited {
-    color:var(--background);
-  }
-
-  .timer {
-    display:flex;
-    padding: 30px 40px 30px 40px;
-    margin: 0 20px 0 0px;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 50%;
-  }
-
-  /*Section flex settings */
-
-  .flexheader {
-    background-color: var(--accent3);
-    background-position: center;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    width: 100%;
-    padding: 50px 0 50px 0;
-
-  }
-
-  .flexbody {
-    display: flex;
-    background-color: var(--background);
-    flex-direction: column;
-  }
-
-  .flexmain {
-    display: flex;
-    background-color: var(--background);
-    flex: 1;
-  }
-
-  .flexquiz {
-    flex-direction: column;
-    background-color: var(--mainclr);
-    padding: 10px;
-    margin: 10px 10px 0 10px;
-    flex: 3;
-    display: flex;
-      /*align-content: center;
-    justify-content: center;*/
-  }
-
-  .startbtn {
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .btn {
-    padding: 20px;
-    margin: 20px;
-    font-size: 20px;
-    font-weight: bolder;
-    background-color: var(--btn);
-    align-content: center;
-    justify-content: center;
-  }
-
-  .quizform {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
- 
-  .submitbtn {
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-  }
-
-
-  /*Boxes on the left side */
-
-  #flexbgpic {
-    background-image: url("../../assets/images/gradient.png");
-    background-size: cover;
-    display: flex;
-    border: none;
-
-  }
-
-  .leftasideboxes {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flexaside {
-    flex-direction: column;
-    background-color: var(--accent2);
-    padding: 20px;
-    margin: 10px 0 0 0;
-    flex: 1;
-  }
-
-  @media screen and (max-width: 840px) {
-    .flexheader {
-        flex-direction: column;
-    }
-    .flexheader h1 {
-      padding: 10px 0 10px 0;
-    } 
-    .flexheader h2 {
-      padding: 10px 0 10px 0;
-    }
+  --background: #0b0c10;
+  --btn: #66fcf1;
+  --mainclr: #1f2833;
+  --accent2: #45a29e;
+  --accent3: #1c3334;
+  --text: #c5c6c7;
 }
+
+/*Global Settings */
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--text);
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 20px 0 20px;
+}
+
+h2 {
+  font-size: 20px;
+  color: var(--text);
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 20px 0 20px;
+}
+
+h3 {
+  font-size: 18px;
+  color: var(--text);
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 20px 10px 0;
+  font-weight: bolder;
+}
+
+p {
+  color: var(--text);
+  padding: 0 0 10px 0;
+}
+
+li {
+  color: var(--text);
+  padding: 10px 20px 20px 40px;
+  text-decoration: none;
+  font-size: larger;
+}
+
+a {
+  padding: 20px 20px 0px 0px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--btn);
+  text-shadow: 1px 1px var(--accent2);
+}
+
+.timer {
+  display: flex;
+  padding: 30px 40px 30px 40px;
+  margin: 0 20px 0 0px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 50%;
+}
+
+/*Section flex settings */
+
+.flexheader {
+  background-color: var(--accent3);
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0 50px 0;
+}
+
+.flexbody {
+  display: flex;
+  background-color: var(--background);
+  flex-direction: column;
+}
+
+.flexmain {
+  display: flex;
+  background-color: var(--background);
+  flex: 1;
+}
+
+.flexquiz {
+  flex-direction: column;
+  background-color: var(--mainclr);
+  padding: 10px;
+  margin: 10px 10px 0 10px;
+  flex: 3;
+  display: flex;
+}
+
+/*Quiz Section*/
+
+.startbtn {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 20px;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: var(--btn);
+  align-content: center;
+  justify-content: center;
+}
+
+.quizform {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.submitbtn {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/*Get initials and add score to the site*/
+
+.score {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#initials {
+  display: column;
+  align-content: center;
+  justify-content: center;
+  color: var(--text);
+}
+.scorebtn {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  }
+
+
+
+
+/*Boxes on the left side */
+
+#flexbgpic {
+  background-image: url("../../assets/images/gradient.png");
+  background-size: cover;
+  display: flex;
+  border: none;
+}
+
+.leftasideboxes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexaside {
+  flex-direction: column;
+  background-color: var(--accent2);
+  padding: 20px;
+  margin: 10px 0 0 0;
+  flex: 1;
+}
+
+/*Optimized for media*/
+@media screen and (max-width: 840px) {
+  .flexheader {
+    flex-direction: column;
+  }
+  .flexheader h1 {
+    padding: 10px 0 10px 0;
+  }
+  .flexheader h2 {
+    padding: 10px 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .flexmain {
+    flex-direction: column-reverse;
+  }
+  .flexmain quizform {
+    padding: 10px 0 10px 0;
+  }
+  .flexmain flexaside {
+    padding: 10px 0 10px 0;
+  }
+}
+
+/*Start of footer*/
 
 .flexfooter {
   background-color: var(--accent3);
   background-position: center;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 20px;
   margin: 10px 0 10px 0;
 }
 
-
-
-    /*@media screen and (max-width: 840px) {
-    .shrink-wrap {
-        flex-direction: column;
-    }*/
-
-
-
- 
-  
-  
-  
-  
-  
-  /*@media screen and (max-width: 840px) {
-    .shrink-wrap {
-        flex-direction: column;
-    }*/
-
-    /*function startTimer(duration, display) {
+/*function startTimer(duration, display) {
       var timer = duration, minutes, seconds;
       setInterval(function () {
           minutes = parseInt(timer / 60, 10);

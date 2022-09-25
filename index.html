@@ -20,27 +20,39 @@
         <button id="clock" class="timer">clock</button>
       </div>
     </header>
-
     <main class="flexmain">
+    <!--Start of left side boxes with links and score ranking-->
       <div class="leftasideboxes">
         <aside class="flexaside" id="flexbgpic">
             <p><h2>Web Coding Resources</h2></p>
             <ul> 
-                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://codeguide.co/" target="_blank">Code Guide</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">*CSS-Tricks</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">W3C</a></li>
+                <li><a href="https://way2tutorial.com/" target="_blank">Way2Tutorial</a></li>
             </ul>
         </aside>
         <aside class="flexaside">
-          <p>flexside2</p>
+          <p><h2>Scores</h2></p>
+          <ul> 
+            <li>High Score #1</li>
+            <li>High Score #2</li>
+            <li>High Score #2</li>
+            <li>High Score #2</li>
+            <li>High Score #2</li>
+            <li>High Score #2</li>
+        </ul>
         </aside>
       </div>
+      <!--Start of quiz-->
       <section class="flexquiz">
         <div class="startbtn">
             <button id="start" class="btn">Start Quiz</button>
         </div>
         <div class="quizform">
             <form id="quizform">
-
                 <h2>Click <span style="color:#66FCF1">Start Quiz</span> button above when you're ready to begin.</h2>
                     </br>
                 <p class="firstQuestion">
@@ -101,12 +113,22 @@
                   <button id="submit" class="btn" >Submit Answer</button>
                 </div>
               </form>
-        
         </div>
+        <div class="score">
+            <form>
+                <label for="initials"><h3>Please enter your initials here:</h3></label>
+                <input id="initials" type="string" placeholder="Your Initials" />
+                <div class="scorebtn">
+                    <button id="score" class="btn">Add your score!</button>
+                </div>
+            </form>
+        </div>
+        <!--End of Quiz-->
       </section>
     </main>
+    <!--Footer Section-->
     <footer class="flexfooter">
-        <p>stuff down here in the footer</p>
+        <p>&copy; Michele Tornetta</p>
     </footer>
   </body>
 </html>
