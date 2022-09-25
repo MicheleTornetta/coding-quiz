@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Assets/css/reset.css" />
     <link rel="stylesheet" href="./Assets/css/style.css" />
-    <script src="assets/js/script.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
     <title>Coding Quiz</title>
-</head>
-<body>
-    <header>
+  </head>
+  <body class="flexbody">
+    <!--Start of title, and timer button-->
+    <header class="flexheader">
+      <div id="pageTitle">
         <h1>Coding Assessment Quiz</h1>
-        <h2>Can you beat the clock?</h2>
-        <div id="timer">
-            js
-        </div>
+      </div>
+      <h2>Can you beat the clock?</h2>
+      <div id="timer">
+        <button id="start" class="btn">Start Quiz</button>
+      </div>
     </header>
-    
-</body>
+
+    <main class="flexmain">
+      <div class="leftasideboxes">
+        <aside class="flexaside1">
+          <p>flexside1</p>
+        </aside>
+        <aside class="flexaside2">
+          <p>flexside2</p>
+        </aside>
+      </div>
+      <section class="flexquiz">
+        <p>flexquiz</p>
+      </section>
+    </main>
+    <footer class="flexfooter">
+        stuff down here in the footer
+    </footer>
+  </body>
 </html>
