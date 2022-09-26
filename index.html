@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Assets/css/reset.css" />
     <link rel="stylesheet" href="./Assets/css/style.css" />
-    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
     <title>Coding Quiz</title>
   </head>
   <body class="flexbody">
@@ -17,7 +17,7 @@
       </div>
       <h2>Can you beat the clock?</h2>
       <div>
-        <button id="clock" class="timer">clock</button>
+        <div id="clock" class="timer">Timer</div>
       </div>
     </header>
     <main class="flexmain">
@@ -34,7 +34,7 @@
                 <li><a href="https://way2tutorial.com/" target="_blank">Way2Tutorial</a></li>
             </ul>
         </aside>
-        <aside class="flexaside">
+        <aside class="flexaside" id="results">
           <p><h2>Scores</h2></p>
           <ul> 
             <li>High Score #1</li>
@@ -49,7 +49,7 @@
       <!--Start of quiz-->
       <section class="flexquiz">
         <div class="startbtn">
-            <button id="start" class="btn">Start Quiz</button>
+            <button onclick="start()" id="start" class="btn">Start Quiz</button>
         </div>
         <div class="quizform">
             <form id="quizform">
@@ -63,51 +63,51 @@
                 </p>
                 <p class = nextQuestion>
                     <label for="question2"><h3>What is the definition of a DOM?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> It is a data optimization management system.</p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> It is a domain orientation management system.</p>
-                    <p><input id="q1Answer3" type="checkbox" placeholder="c"/> It is a document object model.</p>
+                    <p><input id="q2Answer1" type="checkbox" placeholder="a"/> It is a data optimization management system.</p>
+                    <p><input id="q2Answer2" type="checkbox" placeholder="b"/> It is a domain orientation management system.</p>
+                    <p><input id="q2Answer3" type="checkbox" placeholder="c"/> It is a document object model.</p>
                 </p>
                 <p class = nextQuestion>
                     <label for="question3"><h3>What is the best understanding of an API?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> An API helps two different programs to communicate with each other.</p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> An Application Programming Interface that allows the user input data directly into the program.</p>
-                    <p><input id="q1Answer3" type="checkbox" placeholder="c"/> Academic Programs International allows learning software to communicate internationally.</p>
+                    <p><input id="q3Answer1" type="checkbox" placeholder="a"/> An API helps two different programs to communicate with each other.</p>
+                    <p><input id="q3Answer2" type="checkbox" placeholder="b"/> An Application Programming Interface that allows the user input data directly into the program.</p>
+                    <p><input id="q3Answer3" type="checkbox" placeholder="c"/> Academic Programs International allows learning software to communicate internationally.</p>
                 </p>
                 <p class = nextQuestion>
                     <label for="question4"><h3>When building a Web Application what are some things you should consider?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> What is the right tech stack.</p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> What will the disign look like and will it be response.</p>
-                    <p><input id="q1Answer3" type="checkbox" placeholder="c"/> A div tag does not support the align attribute; while a span tag does support the align attribute.</p>
+                    <p><input id="q4Answer1" type="checkbox" placeholder="a"/> What is the right tech stack.</p>
+                    <p><input id="q4Answer2" type="checkbox" placeholder="b"/> What will the design look like and will it be response.</p>
+                    <p><input id="q4Answer3" type="checkbox" placeholder="c"/> A div tag does not support the align attribute; while a span tag does support the align attribute.</p>
                 </p>
                 <p class = nextQuestion>
-                    <label for="question5"><h3>Which items are properties and methods of JavaScrip?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> Document, Sytle, Array and Number.</p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> Boolean, Array, Object and Classes.></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="c"/> Array, Operators, Function and String.</p>
+                    <label for="question5"><h3>Which items are properties and methods of JavaScript?</h3></label> 
+                    <p><input id="q5Answer1" type="checkbox" placeholder="a"/> Document, Sytle, Array and Number.</p>
+                    <p><input id="q5Answer2" type="checkbox" placeholder="b"/> Boolean, Array, Object and Classes.</label> 
+                    <p><input id="q5Answer1" type="checkbox" placeholder="c"/> Array, Operators, Function and String.</p>
                 </p>
                 <p class = nextQuestion>
                     <label for="question7"><h3>In CSS, how would you add padding to the bottom of an element?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> padding: 20px; </p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> padding: 0px, 0px, 0px, 10px;</p>
-                    <p><input id="q1Answer3" type="checkbox" placeholder="c"/> padding: 0 0 10px 0;</p>
+                    <p><input id="q6Answer1" type="checkbox" placeholder="a"/> padding: 20px; </p>
+                    <p><input id="q6Answer2" type="checkbox" placeholder="b"/> padding: 0px, 0px, 0px, 10px;</p>
+                    <p><input id="q6Answer3" type="checkbox" placeholder="c"/> padding: 0 0 10px 0;</p>
                 </p>
                 <p class = nextQuestion>
                     <label for="question8"><h3>What would you add in order to open a url in a new window?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> target="_blank"</p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> target="new"</p>
-                    <p><input id="q1Answer3" type="checkbox" placeholder="c"/> target="_NewTab"</p>
+                    <p><input id="q7Answer1" type="checkbox" placeholder="a"/> target="_blank"</p>
+                    <p><input id="q7Answer2" type="checkbox" placeholder="b"/> target="new"</p>
+                    <p><input id="q7Answer3" type="checkbox" placeholder="c"/> target="_NewTab"</p>
                 </p>
                 <p class = nextQuestion>
                     <label for="question9"><h3>What is a preferred tool that can be utilized to debug code errors?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> A fly swatter.</p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> Inspect element in the brower's dev tools.</p>
-                    <p><input id="q1Answer3" type="checkbox" placeholder="c"/> View page source in the brower's dev tools.</p>
+                    <p><input id="q8Answer1" type="checkbox" placeholder="a"/> A fly swatter.</p>
+                    <p><input id="q8Answer2" type="checkbox" placeholder="b"/> Inspect element in the brower's dev tools.</p>
+                    <p><input id="q8Answer3" type="checkbox" placeholder="c"/> View page source in the brower's dev tools.</p>
                 </p>
                 <p class = nextQuestion>
                     <label for="question10"><h3>What are the 5 elements used in HTML5 that supports different media types?</h3></label> 
-                    <p><input id="q1Answer1" type="checkbox" placeholder="a"/> audio, video, source, embed, track</p>
-                    <p><input id="q1Answer2" type="checkbox" placeholder="b"/> audio, video, media, source, mp3.</p>
-                    <p><input id="q1Answer3" type="checkbox" placeholder="c"/> flack, mp3, flv, mov, effects.</p>
+                    <p><input id="q9Answer1" type="checkbox" placeholder="a"/> audio, video, source, embed, track</p>
+                    <p><input id="q9Answer2" type="checkbox" placeholder="b"/> audio, video, media, source, mp3.</p>
+                    <p><input id="q9Answer3" type="checkbox" placeholder="c"/> flack, mp3, flv, mov, effects.</p>
                 </p>
                 <div class="submitbtn">
                   <button id="submit" class="btn" >Submit Answer</button>
@@ -117,7 +117,7 @@
         <div class="score">
             <form>
                 <label for="initials"><h3>Please enter your initials here:</h3></label>
-                <input id="initials" type="string" placeholder="Your Initials" />
+                <input id="initials" type="string" name="initials" placeholder="Your Initials" />
                 <div class="scorebtn">
                     <button id="score" class="btn">Add your score!</button>
                 </div>
