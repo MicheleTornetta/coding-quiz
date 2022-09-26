@@ -1,9 +1,20 @@
-// Countdown Clock - see readme for
+// Countdown Clock - see readme for credits
 // Make button start Clock
+// Below is to populate the answer options
+
+function makeAnswerList(answerArray) {
+  let answerlist = "";
+
+  for (i = 0; i < answerArray.length; i += 1) {
+    answerlist += "<li>" + answerArray[i] + "</li>";
+  }
+
+  return answerlist;
+}
 
 function start() {
   console.log("clock");
-  let clock = 10;
+  let clock = 30;
   let interval = setInterval(function () {
     clock -= 1;
     document.getElementById("clock").innerHTML = clock;
@@ -14,9 +25,17 @@ function start() {
       alert("Try again!");
     }
   }, 1000);
+  function quizform() {
+    let firstquestion = questions[0];
+
+    let answerText = makeAnswerList(firstquestion.answers);
+
+    console.log(answerText);
+  }
+  quizform();
 }
 
-// every question has text, 3 answers 1=true and 2 = false
+/* Multiple choice questions with one correct anaser - each question is contained within the main array and the answers in an array as well*/
 
 const questions = [
   {
@@ -47,13 +66,14 @@ const questions = [
     correctAnswer: 0,
   },
   {
-    question: "When building a Web Application what are some things you should consider?",
+    question:
+      "When building a Web Application what are some things you should consider?",
     answers: [
       "What company will host the domain?",
       "What will the design look like and will it be responsive?",
       "Is the font being used popular?",
     ],
-    correctAnswer: 1, 
+    correctAnswer: 1,
   },
   {
     question: "What is a JavaScript method?",
@@ -74,7 +94,8 @@ const questions = [
     correctAnswer: 2,
   },
   {
-    question: "What is a preferred tool that can be utilized to debug code errors?",
+    question:
+      "What is a preferred tool that can be utilized to debug code errors?",
     answers: [
       "A fly swatter.",
       "Inspect element in the brower's dev tools.",
@@ -82,8 +103,9 @@ const questions = [
     ],
     correctAnswer: 1,
   },
-  { 
-    question: "What are the 5 elements used in HTML5 that supports different media types?",
+  {
+    question:
+      "What are the 5 elements used in HTML5 that supports different media types?",
     answers: [
       "audio, video, source, embed, track.",
       "audio, video, media, source, mp3.",
@@ -92,28 +114,6 @@ const questions = [
     correctAnswer: 0,
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*let startBtn = document.getElementById("start");
 /*Add event listener to generate button

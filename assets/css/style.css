@@ -131,6 +131,9 @@ a:visited {
   display: flex;
   align-content: center;
   justify-content: center;
+  color: var(--background);
+  text-align: center;
+ 
 }
 
 .submitbtn {
