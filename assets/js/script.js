@@ -1,41 +1,4 @@
-// Countdown Clock - see readme for credits
-// Make button start Clock
-// Below is to populate the answer options
-
-function makeAnswerList(answerArray) {
-  let answerlist = "";
-
-  for (i = 0; i < answerArray.length; i += 1) {
-    answerlist += "<li>" + answerArray[i] + "</li>";
-  }
-
-  return answerlist;
-}
-
-function start() {
-  console.log("clock");
-  let clock = 30;
-  let interval = setInterval(function () {
-    clock -= 1;
-    document.getElementById("clock").innerHTML = clock;
-    if (clock === -1) {
-      clearInterval(interval);
-      document.getElementById("clock").innerHTML = "Done";
-      // or...
-      alert("Try again!");
-    }
-  }, 1000);
-  function quizform() {
-    let firstquestion = questions[0];
-
-    let answerText = makeAnswerList(firstquestion.answers);
-
-    console.log(answerText);
-  }
-  quizform();
-}
-
-/* Multiple choice questions with one correct anaser - each question is contained within the main array and the answers in an array as well*/
+//The Array of questions and answers 
 
 const questions = [
   {
@@ -114,6 +77,149 @@ const questions = [
     correctAnswer: 0,
   },
 ];
+
+//Set up of random array for question to equal 5
+let indices = [];
+function fillIndices () {
+  for (var i = 0; i < questions.length; i++) {
+    indices.push(i)// add an item to the end an an array
+  }
+  while (indices.splice(index)) {
+    
+  }
+}
+
+//storage of current question
+
+let currentQuestion;
+let clock;
+
+//verify if correct answer and move on or wrong answer and subtract time
+function submitAnswer(answerIndex) {
+  if (answerIndex === currentQuestion.correctAnswer) {
+    alert("Correct!");
+    
+  }
+  else {
+    clock -= 10; 
+    alert("Try again!");
+  }
+}
+
+// Below is to populate the answer options
+//function that can be used anywhere you want to turn an array into a text in a list
+function makeAnswerList(answerArray) {
+  let answerlist = "";
+
+  for (i = 0; i < answerArray.length; i ++) {
+    //submits the answer and tells which answer they chose
+    answerlist += "<li><button onclick='submitAnswer("+ i +")'>" + answerArray[i] + "</button></li>";
+  }
+  return answerlist;
+}
+// Countdown Clock - see readme for credits
+
+function start() {
+
+
+  //clock
+  console.log("clock");
+  let clock = 30; 
+  //Timer to start the timer on click
+  let interval = setInterval(function () {
+    clock -= 1;
+    document.getElementById("clock").innerHTML = clock;
+    if (clock === -1) {
+      clearInterval(interval);
+      document.getElementById("clock").innerHTML = "Done";
+      // or...
+      alert("Try again!");
+    }
+  }, 1000);
+
+  //to start the questions on same click as timer
+  function quizform() {
+    currentQuestion = questions[0];
+    let answerText = makeAnswerList(currentQuestion.answers);
+    console.log(answerText);
+    //To update the html
+    document.getElementById("question").innerHTML = currentQuestion.question;
+    document.getElementById("answers").innerHTML = answerText;
+  }
+  //calls the function = runs the code inside
+  quizform();
+
+}
+
+   
+
+/* Multiple choice questions with one correct anaser - each question is contained within the main array and the answers in an array as well*/
+
+
+
+// stop page from refreshing when button pushed 
+/*
+var submitEl = document.querySelector("#submit");
+var nameInput = document.querySelector("#name");
+var emailInput = document.querySelector("#email");
+var submissionResponseEl = document.querySelector("#response");
+
+// Action to be performed on click store in named function
+function showResponse(event) {
+  // Prevent default action
+  event.preventDefault();
+  console.log(event);
+  var response = "Thank you for your submission " + nameInput.value + "! We will reach out to you at " + emailInput.value + ".";
+  submissionResponseEl.textContent = response;
+} 
+-------------------------------------*/
+//capture keyboard text and log
+/*
+var typefaceEl = document.querySelector('#typeface');
+var clearEl = document.querySelector('#clear');
+var h1El = document.querySelector('#h1');
+var h2El = document.querySelector('#h2');
+var h3El = document.querySelector('#h3');
+var pEl = document.querySelector('#p');
+var textAreaEl = document.querySelector('#textarea');
+
+var elements = [h1El, h2El, h3El, pEl];
+
+var typeface;
+
+// Change event
+typefaceEl.addEventListener('change', function (event) {
+  event.preventDefault();
+  typeface = typefaceEl.value;
+  document.querySelector('.container').style.fontFamily = typeface;
+});
+
+// Keydown event
+textAreaEl.addEventListener('keydown', function (event) {
+  // Access value of pressed key with key property
+  var key = event.key.toLowerCase();
+  var alphabetNumericCharacters = 'abcdefghijklmnopqrstuvwxyz0123456789 '.split(
+    ''
+  );
+  if (alphabetNumericCharacters.includes(key)) {
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].textContent += event.key;
+    }
+  }
+});
+
+clearEl.addEventListener('click', function (event) {
+  event.preventDefault();
+  textAreaEl.value = '';
+
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].textContent = '';
+  }
+});
+------------------------------------------------
+*/
+
+
 
 /*let startBtn = document.getElementById("start");
 /*Add event listener to generate button
