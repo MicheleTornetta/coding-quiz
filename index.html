@@ -35,20 +35,22 @@
             </ul>
         </aside>
         <aside class="flexaside" id="results">
-          <p><h2>Score</h2></p>
-          <ul> 
-            <li class="result">Your Score #1</li>
+          <p><h2>Your Scores</h2></p>
+          <ul id="scoreResults"> 
+            <li class="result">Your Scores</li>
         </ul>
         </aside>
       </div>
       <!--Start of quiz-->
       <section class="flexquiz">
-        <div class="startbtn">
-            <button onclick="start()" id="start" class="btn">Start Quiz</button>
+        <div id="startMenu">
+          <div class="startbtn">
+              <button onclick="start()" id="start" class="btn">Start Quiz</button>
+          </div>                
+          <h2 class="startbtntext">Click <span style="color:#66FCF1">Start Quiz</span> button above when you're ready to begin.</h2>
         </div>
-        <div class="quizform">
-            <section id="quizform">
-                <h2>Click <span style="color:#66FCF1">Start Quiz</span> button above when you're ready to begin.</h2>
+        <div class="quizform" id="quizform">
+            <section>
                     </br>
                 <div class="question-container" >
                   <p id="question"> <!--Filled by JavaScript--></p>
@@ -59,20 +61,7 @@
                   </ul>
                          
                 </div>
-                
-                <div class="submitbtn">
-                  <button id="submit" class="btn" >Submit Answer</button>
-                </div>
               </section>
-        </div>
-        <div class="score">
-            <form>
-                <label for="initials"><h3>Please enter your initials here:</h3></label>
-                <input id="initials" type="string" name="initials" placeholder="Your Initials" />
-                <div class="scorebtn">
-                    <button id="score" class="btn">Add your score!</button>
-                </div>
-            </form>
         </div>
         <!--End of Quiz-->
       </section>

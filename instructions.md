@@ -11,20 +11,21 @@ build a timed coding quiz
 ---have a clean, polished, and responsive user interface. 
 
 
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
+        done **WHEN I click the start button
+        **THEN a timer starts and I am presented with a question
 
-WHEN I answer a question
-THEN I am presented with another question
+        done WHEN I answer a question correctly - I earn points
+        THEN I am presented with another question
 
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
+        ***DONE WHEN I answer a question incorrectly
+        THEN time is subtracted from the clock
 
 WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 
 
 THEN I can save my initials and my score
+    ---JSON.stringify?
 ```
 
 ## Mock-Up

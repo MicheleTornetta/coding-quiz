@@ -43,6 +43,15 @@ h3 {
   font-weight: bolder;
 }
 
+h4 {
+  font-size: 30px;
+  color: var(--text);
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 20px 10px 0;
+  font-weight: bolder;
+}
+
 p {
   color: var(--text);
   padding: 0 0 10px 0;
@@ -50,8 +59,8 @@ p {
 
 li {
   color: var(--text);
-  padding: 10px 20px 20px 40px;
-  text-decoration: none;
+  padding: 10px 20px 10px 40px;
+  list-style-type: none;
   font-size: larger;
 }
 
@@ -84,7 +93,7 @@ a:visited {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 50px 0 50px 0;
+  padding: 40px 0 40px 0;
 }
 
 .flexbody {
@@ -115,6 +124,10 @@ a:visited {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+.startbtntext {
+  text-align: center;
 }
 
 .btn {
@@ -164,8 +177,9 @@ a:visited {
   justify-content: center;
   }
 
-
-
+.hide{
+  display: none;
+}
 
 /*Boxes on the left side */
 
