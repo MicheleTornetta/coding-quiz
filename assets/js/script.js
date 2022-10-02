@@ -168,7 +168,7 @@ function makeAnswerList(answerArray) {
   }
   return answerlist;
 }
-// Countdown Clock - see readme for credits
+// Countdown Clock 
 
 function start() {
   showQuiz();
