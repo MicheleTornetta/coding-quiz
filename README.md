@@ -33,7 +33,7 @@ Then users initials and score, which is calculated by multiplying the time on th
 
 The following image demonstrates the web application's appearance and functionality:
 
-[Here is a picture of the coding quiz.](./Assets/images/quizsample.png)
+[Here is a picture of the coding quiz.](./assets/images/quizsample.png)
 
 ## Repository & Live Link
 
