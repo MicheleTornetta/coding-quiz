@@ -37,6 +37,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## Repository & Live Link
 
-[Here is the  repository link.] https://github.com/MicheleTornetta/coding-quiz
+[Here is the repository link.] https://github.com/MicheleTornetta/coding-quiz
+
 [Here is the live link.] https://MicheleTornetta.github.io/coding-quiz/
 
